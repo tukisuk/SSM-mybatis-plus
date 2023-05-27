@@ -1,0 +1,1109 @@
+ 6: [function(t, e, n) {
+                    var r = t("google-protobuf")
+                      , o = r
+                      , i = Function("return this")();
+                    o.exportSymbol("proto.AwardBankerResult", null, i),
+                    o.exportSymbol("proto.AwardBetDetail", null, i),
+                    o.exportSymbol("proto.AwardRank", null, i),
+                    o.exportSymbol("proto.AwardSelfResult", null, i),
+                    o.exportSymbol("proto.BetDetailItem", null, i),
+                    o.exportSymbol("proto.CurrentBankerInfo", null, i),
+                    o.exportSymbol("proto.RacingGameAwardHistory", null, i),
+                    o.exportSymbol("proto.RacingGameAwardResult", null, i),
+                    o.exportSymbol("proto.RacingGameBetInfo", null, i),
+                    o.exportSymbol("proto.RacingGameCurrentRoundInfo", null, i),
+                    o.exportSymbol("proto.RoundMetaInfo", null, i),
+                    proto.RacingGameBetInfo = function(t) {
+                        r.Message.initialize(this, t, 0, -1, proto.RacingGameBetInfo.repeatedFields_, null)
+                    }
+                    ,
+                    o.inherits(proto.RacingGameBetInfo, r.Message),
+                    o.DEBUG && !COMPILED && (proto.RacingGameBetInfo.displayName = "proto.RacingGameBetInfo"),
+                    proto.BetDetailItem = function(t) {
+                        r.Message.initialize(this, t, 0, -1, null, null)
+                    }
+                    ,
+                    o.inherits(proto.BetDetailItem, r.Message),
+                    o.DEBUG && !COMPILED && (proto.BetDetailItem.displayName = "proto.BetDetailItem"),
+                    proto.RacingGameAwardResult = function(t) {
+                        r.Message.initialize(this, t, 0, -1, proto.RacingGameAwardResult.repeatedFields_, null)
+                    }
+                    ,
+                    o.inherits(proto.RacingGameAwardResult, r.Message),
+                    o.DEBUG && !COMPILED && (proto.RacingGameAwardResult.displayName = "proto.RacingGameAwardResult"),
+                    proto.AwardSelfResult = function(t) {
+                        r.Message.initialize(this, t, 0, -1, null, null)
+                    }
+                    ,
+                    o.inherits(proto.AwardSelfResult, r.Message),
+                    o.DEBUG && !COMPILED && (proto.AwardSelfResult.displayName = "proto.AwardSelfResult"),
+                    proto.AwardBankerResult = function(t) {
+                        r.Message.initialize(this, t, 0, -1, null, null)
+                    }
+                    ,
+                    o.inherits(proto.AwardBankerResult, r.Message),
+                    o.DEBUG && !COMPILED && (proto.AwardBankerResult.displayName = "proto.AwardBankerResult"),
+                    proto.AwardRank = function(t) {
+                        r.Message.initialize(this, t, 0, -1, null, null)
+                    }
+                    ,
+                    o.inherits(proto.AwardRank, r.Message),
+                    o.DEBUG && !COMPILED && (proto.AwardRank.displayName = "proto.AwardRank"),
+                    proto.AwardBetDetail = function(t) {
+                        r.Message.initialize(this, t, 0, -1, null, null)
+                    }
+                    ,
+                    o.inherits(proto.AwardBetDetail, r.Message),
+                    o.DEBUG && !COMPILED && (proto.AwardBetDetail.displayName = "proto.AwardBetDetail"),
+                    proto.RacingGameAwardHistory = function(t) {
+                        r.Message.initialize(this, t, 0, -1, proto.RacingGameAwardHistory.repeatedFields_, null)
+                    }
+                    ,
+                    o.inherits(proto.RacingGameAwardHistory, r.Message),
+                    o.DEBUG && !COMPILED && (proto.RacingGameAwardHistory.displayName = "proto.RacingGameAwardHistory"),
+                    proto.RacingGameCurrentRoundInfo = function(t) {
+                        r.Message.initialize(this, t, 0, -1, null, null)
+                    }
+                    ,
+                    o.inherits(proto.RacingGameCurrentRoundInfo, r.Message),
+                    o.DEBUG && !COMPILED && (proto.RacingGameCurrentRoundInfo.displayName = "proto.RacingGameCurrentRoundInfo"),
+                    proto.RoundMetaInfo = function(t) {
+                        r.Message.initialize(this, t, 0, -1, null, null)
+                    }
+                    ,
+                    o.inherits(proto.RoundMetaInfo, r.Message),
+                    o.DEBUG && !COMPILED && (proto.RoundMetaInfo.displayName = "proto.RoundMetaInfo"),
+                    proto.CurrentBankerInfo = function(t) {
+                        r.Message.initialize(this, t, 0, -1, null, null)
+                    }
+                    ,
+                    o.inherits(proto.CurrentBankerInfo, r.Message),
+                    o.DEBUG && !COMPILED && (proto.CurrentBankerInfo.displayName = "proto.CurrentBankerInfo"),
+                    proto.RacingGameBetInfo.repeatedFields_ = [3],
+                    r.Message.GENERATE_TO_OBJECT && (proto.RacingGameBetInfo.prototype.toObject = function(t) {
+                        return proto.RacingGameBetInfo.toObject(t, this)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.toObject = function(t, e) {
+                        var n = {
+                            gametoken: r.Message.getFieldWithDefault(e, 1, ""),
+                            dayroundnum: r.Message.getFieldWithDefault(e, 2, 0),
+                            betdetailList: r.Message.toObjectList(e.getBetdetailList(), proto.BetDetailItem.toObject, t)
+                        };
+                        return t && (n.$jspbMessageInstance = e),
+                        n
+                    }
+                    ),
+                    proto.RacingGameBetInfo.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.RacingGameBetInfo;
+                        return proto.RacingGameBetInfo.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readString();
+                                t.setGametoken(n);
+                                break;
+                            case 2:
+                                n = e.readInt32();
+                                t.setDayroundnum(n);
+                                break;
+                            case 3:
+                                n = new proto.BetDetailItem;
+                                e.readMessage(n, proto.BetDetailItem.deserializeBinaryFromReader),
+                                t.addBetdetail(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.RacingGameBetInfo.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.RacingGameBetInfo.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        (n = t.getGametoken()).length > 0 && e.writeString(1, n),
+                        0 !== (n = t.getDayroundnum()) && e.writeInt32(2, n),
+                        (n = t.getBetdetailList()).length > 0 && e.writeRepeatedMessage(3, n, proto.BetDetailItem.serializeBinaryToWriter)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.getGametoken = function() {
+                        return r.Message.getFieldWithDefault(this, 1, "")
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.setGametoken = function(t) {
+                        return r.Message.setProto3StringField(this, 1, t)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.getDayroundnum = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.setDayroundnum = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.getBetdetailList = function() {
+                        return r.Message.getRepeatedWrapperField(this, proto.BetDetailItem, 3)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.setBetdetailList = function(t) {
+                        return r.Message.setRepeatedWrapperField(this, 3, t)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.addBetdetail = function(t, e) {
+                        return r.Message.addToRepeatedWrapperField(this, 3, t, proto.BetDetailItem, e)
+                    }
+                    ,
+                    proto.RacingGameBetInfo.prototype.clearBetdetailList = function() {
+                        return this.setBetdetailList([])
+                    }
+                    ,
+                    r.Message.GENERATE_TO_OBJECT && (proto.BetDetailItem.prototype.toObject = function(t) {
+                        return proto.BetDetailItem.toObject(t, this)
+                    }
+                    ,
+                    proto.BetDetailItem.toObject = function(t, e) {
+                        var n = {
+                            carid: r.Message.getFieldWithDefault(e, 1, 0),
+                            betracingcoin: r.Message.getFieldWithDefault(e, 2, 0)
+                        };
+                        return t && (n.$jspbMessageInstance = e),
+                        n
+                    }
+                    ),
+                    proto.BetDetailItem.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.BetDetailItem;
+                        return proto.BetDetailItem.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.BetDetailItem.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readInt32();
+                                t.setCarid(n);
+                                break;
+                            case 2:
+                                n = e.readInt64();
+                                t.setBetracingcoin(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.BetDetailItem.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.BetDetailItem.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.BetDetailItem.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        0 !== (n = t.getCarid()) && e.writeInt32(1, n),
+                        0 !== (n = t.getBetracingcoin()) && e.writeInt64(2, n)
+                    }
+                    ,
+                    proto.BetDetailItem.prototype.getCarid = function() {
+                        return r.Message.getFieldWithDefault(this, 1, 0)
+                    }
+                    ,
+                    proto.BetDetailItem.prototype.setCarid = function(t) {
+                        return r.Message.setProto3IntField(this, 1, t)
+                    }
+                    ,
+                    proto.BetDetailItem.prototype.getBetracingcoin = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.BetDetailItem.prototype.setBetracingcoin = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.repeatedFields_ = [6, 7],
+                    r.Message.GENERATE_TO_OBJECT && (proto.RacingGameAwardResult.prototype.toObject = function(t) {
+                        return proto.RacingGameAwardResult.toObject(t, this)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.toObject = function(t, e) {
+                        var n, o = {
+                            carid: r.Message.getFieldWithDefault(e, 1, 0),
+                            isbig: r.Message.getFieldWithDefault(e, 2, 0),
+                            roundnum: r.Message.getFieldWithDefault(e, 3, 0),
+                            selfresult: (n = e.getSelfresult()) && proto.AwardSelfResult.toObject(t, n),
+                            bankerresult: (n = e.getBankerresult()) && proto.AwardBankerResult.toObject(t, n),
+                            rankList: r.Message.toObjectList(e.getRankList(), proto.AwardRank.toObject, t),
+                            betdetailList: r.Message.toObjectList(e.getBetdetailList(), proto.AwardBetDetail.toObject, t)
+                        };
+                        return t && (o.$jspbMessageInstance = e),
+                        o
+                    }
+                    ),
+                    proto.RacingGameAwardResult.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.RacingGameAwardResult;
+                        return proto.RacingGameAwardResult.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readInt32();
+                                t.setCarid(n);
+                                break;
+                            case 2:
+                                n = e.readInt32();
+                                t.setIsbig(n);
+                                break;
+                            case 3:
+                                n = e.readInt32();
+                                t.setRoundnum(n);
+                                break;
+                            case 4:
+                                n = new proto.AwardSelfResult;
+                                e.readMessage(n, proto.AwardSelfResult.deserializeBinaryFromReader),
+                                t.setSelfresult(n);
+                                break;
+                            case 5:
+                                n = new proto.AwardBankerResult;
+                                e.readMessage(n, proto.AwardBankerResult.deserializeBinaryFromReader),
+                                t.setBankerresult(n);
+                                break;
+                            case 6:
+                                n = new proto.AwardRank;
+                                e.readMessage(n, proto.AwardRank.deserializeBinaryFromReader),
+                                t.addRank(n);
+                                break;
+                            case 7:
+                                n = new proto.AwardBetDetail;
+                                e.readMessage(n, proto.AwardBetDetail.deserializeBinaryFromReader),
+                                t.addBetdetail(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.RacingGameAwardResult.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.RacingGameAwardResult.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        0 !== (n = t.getCarid()) && e.writeInt32(1, n),
+                        0 !== (n = t.getIsbig()) && e.writeInt32(2, n),
+                        0 !== (n = t.getRoundnum()) && e.writeInt32(3, n),
+                        null != (n = t.getSelfresult()) && e.writeMessage(4, n, proto.AwardSelfResult.serializeBinaryToWriter),
+                        null != (n = t.getBankerresult()) && e.writeMessage(5, n, proto.AwardBankerResult.serializeBinaryToWriter),
+                        (n = t.getRankList()).length > 0 && e.writeRepeatedMessage(6, n, proto.AwardRank.serializeBinaryToWriter),
+                        (n = t.getBetdetailList()).length > 0 && e.writeRepeatedMessage(7, n, proto.AwardBetDetail.serializeBinaryToWriter)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.getCarid = function() {
+                        return r.Message.getFieldWithDefault(this, 1, 0)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.setCarid = function(t) {
+                        return r.Message.setProto3IntField(this, 1, t)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.getIsbig = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.setIsbig = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.getRoundnum = function() {
+                        return r.Message.getFieldWithDefault(this, 3, 0)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.setRoundnum = function(t) {
+                        return r.Message.setProto3IntField(this, 3, t)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.getSelfresult = function() {
+                        return r.Message.getWrapperField(this, proto.AwardSelfResult, 4)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.setSelfresult = function(t) {
+                        return r.Message.setWrapperField(this, 4, t)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.clearSelfresult = function() {
+                        return this.setSelfresult(void 0)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.hasSelfresult = function() {
+                        return null != r.Message.getField(this, 4)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.getBankerresult = function() {
+                        return r.Message.getWrapperField(this, proto.AwardBankerResult, 5)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.setBankerresult = function(t) {
+                        return r.Message.setWrapperField(this, 5, t)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.clearBankerresult = function() {
+                        return this.setBankerresult(void 0)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.hasBankerresult = function() {
+                        return null != r.Message.getField(this, 5)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.getRankList = function() {
+                        return r.Message.getRepeatedWrapperField(this, proto.AwardRank, 6)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.setRankList = function(t) {
+                        return r.Message.setRepeatedWrapperField(this, 6, t)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.addRank = function(t, e) {
+                        return r.Message.addToRepeatedWrapperField(this, 6, t, proto.AwardRank, e)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.clearRankList = function() {
+                        return this.setRankList([])
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.getBetdetailList = function() {
+                        return r.Message.getRepeatedWrapperField(this, proto.AwardBetDetail, 7)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.setBetdetailList = function(t) {
+                        return r.Message.setRepeatedWrapperField(this, 7, t)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.addBetdetail = function(t, e) {
+                        return r.Message.addToRepeatedWrapperField(this, 7, t, proto.AwardBetDetail, e)
+                    }
+                    ,
+                    proto.RacingGameAwardResult.prototype.clearBetdetailList = function() {
+                        return this.setBetdetailList([])
+                    }
+                    ,
+                    r.Message.GENERATE_TO_OBJECT && (proto.AwardSelfResult.prototype.toObject = function(t) {
+                        return proto.AwardSelfResult.toObject(t, this)
+                    }
+                    ,
+                    proto.AwardSelfResult.toObject = function(t, e) {
+                        var n = {
+                            racingcoin: r.Message.getFieldWithDefault(e, 1, 0),
+                            score: r.Message.getFieldWithDefault(e, 2, 0),
+                            isbet: r.Message.getFieldWithDefault(e, 3, 0)
+                        };
+                        return t && (n.$jspbMessageInstance = e),
+                        n
+                    }
+                    ),
+                    proto.AwardSelfResult.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.AwardSelfResult;
+                        return proto.AwardSelfResult.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.AwardSelfResult.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readInt64();
+                                t.setRacingcoin(n);
+                                break;
+                            case 2:
+                                n = e.readInt32();
+                                t.setScore(n);
+                                break;
+                            case 3:
+                                n = e.readInt32();
+                                t.setIsbet(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.AwardSelfResult.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.AwardSelfResult.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.AwardSelfResult.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        0 !== (n = t.getRacingcoin()) && e.writeInt64(1, n),
+                        0 !== (n = t.getScore()) && e.writeInt32(2, n),
+                        0 !== (n = t.getIsbet()) && e.writeInt32(3, n)
+                    }
+                    ,
+                    proto.AwardSelfResult.prototype.getRacingcoin = function() {
+                        return r.Message.getFieldWithDefault(this, 1, 0)
+                    }
+                    ,
+                    proto.AwardSelfResult.prototype.setRacingcoin = function(t) {
+                        return r.Message.setProto3IntField(this, 1, t)
+                    }
+                    ,
+                    proto.AwardSelfResult.prototype.getScore = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.AwardSelfResult.prototype.setScore = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    proto.AwardSelfResult.prototype.getIsbet = function() {
+                        return r.Message.getFieldWithDefault(this, 3, 0)
+                    }
+                    ,
+                    proto.AwardSelfResult.prototype.setIsbet = function(t) {
+                        return r.Message.setProto3IntField(this, 3, t)
+                    }
+                    ,
+                    r.Message.GENERATE_TO_OBJECT && (proto.AwardBankerResult.prototype.toObject = function(t) {
+                        return proto.AwardBankerResult.toObject(t, this)
+                    }
+                    ,
+                    proto.AwardBankerResult.toObject = function(t, e) {
+                        var n = {
+                            racingcoin: r.Message.getFieldWithDefault(e, 1, 0),
+                            score: r.Message.getFieldWithDefault(e, 2, 0)
+                        };
+                        return t && (n.$jspbMessageInstance = e),
+                        n
+                    }
+                    ),
+                    proto.AwardBankerResult.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.AwardBankerResult;
+                        return proto.AwardBankerResult.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.AwardBankerResult.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readInt64();
+                                t.setRacingcoin(n);
+                                break;
+                            case 2:
+                                n = e.readInt32();
+                                t.setScore(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.AwardBankerResult.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.AwardBankerResult.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.AwardBankerResult.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        0 !== (n = t.getRacingcoin()) && e.writeInt64(1, n),
+                        0 !== (n = t.getScore()) && e.writeInt32(2, n)
+                    }
+                    ,
+                    proto.AwardBankerResult.prototype.getRacingcoin = function() {
+                        return r.Message.getFieldWithDefault(this, 1, 0)
+                    }
+                    ,
+                    proto.AwardBankerResult.prototype.setRacingcoin = function(t) {
+                        return r.Message.setProto3IntField(this, 1, t)
+                    }
+                    ,
+                    proto.AwardBankerResult.prototype.getScore = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.AwardBankerResult.prototype.setScore = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    r.Message.GENERATE_TO_OBJECT && (proto.AwardRank.prototype.toObject = function(t) {
+                        return proto.AwardRank.toObject(t, this)
+                    }
+                    ,
+                    proto.AwardRank.toObject = function(t, e) {
+                        var n = {
+                            nickname: r.Message.getFieldWithDefault(e, 1, ""),
+                            score: r.Message.getFieldWithDefault(e, 2, 0),
+                            num: r.Message.getFieldWithDefault(e, 3, 0)
+                        };
+                        return t && (n.$jspbMessageInstance = e),
+                        n
+                    }
+                    ),
+                    proto.AwardRank.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.AwardRank;
+                        return proto.AwardRank.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.AwardRank.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readString();
+                                t.setNickname(n);
+                                break;
+                            case 2:
+                                n = e.readInt32();
+                                t.setScore(n);
+                                break;
+                            case 3:
+                                n = e.readInt32();
+                                t.setNum(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.AwardRank.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.AwardRank.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.AwardRank.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        (n = t.getNickname()).length > 0 && e.writeString(1, n),
+                        0 !== (n = t.getScore()) && e.writeInt32(2, n),
+                        0 !== (n = t.getNum()) && e.writeInt32(3, n)
+                    }
+                    ,
+                    proto.AwardRank.prototype.getNickname = function() {
+                        return r.Message.getFieldWithDefault(this, 1, "")
+                    }
+                    ,
+                    proto.AwardRank.prototype.setNickname = function(t) {
+                        return r.Message.setProto3StringField(this, 1, t)
+                    }
+                    ,
+                    proto.AwardRank.prototype.getScore = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.AwardRank.prototype.setScore = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    proto.AwardRank.prototype.getNum = function() {
+                        return r.Message.getFieldWithDefault(this, 3, 0)
+                    }
+                    ,
+                    proto.AwardRank.prototype.setNum = function(t) {
+                        return r.Message.setProto3IntField(this, 3, t)
+                    }
+                    ,
+                    r.Message.GENERATE_TO_OBJECT && (proto.AwardBetDetail.prototype.toObject = function(t) {
+                        return proto.AwardBetDetail.toObject(t, this)
+                    }
+                    ,
+                    proto.AwardBetDetail.toObject = function(t, e) {
+                        var n = {
+                            carid: r.Message.getFieldWithDefault(e, 1, 0),
+                            betracingcoin: r.Message.getFieldWithDefault(e, 2, 0)
+                        };
+                        return t && (n.$jspbMessageInstance = e),
+                        n
+                    }
+                    ),
+                    proto.AwardBetDetail.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.AwardBetDetail;
+                        return proto.AwardBetDetail.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.AwardBetDetail.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readInt32();
+                                t.setCarid(n);
+                                break;
+                            case 2:
+                                n = e.readInt64();
+                                t.setBetracingcoin(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.AwardBetDetail.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.AwardBetDetail.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.AwardBetDetail.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        0 !== (n = t.getCarid()) && e.writeInt32(1, n),
+                        0 !== (n = t.getBetracingcoin()) && e.writeInt64(2, n)
+                    }
+                    ,
+                    proto.AwardBetDetail.prototype.getCarid = function() {
+                        return r.Message.getFieldWithDefault(this, 1, 0)
+                    }
+                    ,
+                    proto.AwardBetDetail.prototype.setCarid = function(t) {
+                        return r.Message.setProto3IntField(this, 1, t)
+                    }
+                    ,
+                    proto.AwardBetDetail.prototype.getBetracingcoin = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.AwardBetDetail.prototype.setBetracingcoin = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.repeatedFields_ = [1],
+                    r.Message.GENERATE_TO_OBJECT && (proto.RacingGameAwardHistory.prototype.toObject = function(t) {
+                        return proto.RacingGameAwardHistory.toObject(t, this)
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.toObject = function(t, e) {
+                        var n, o = {
+                            awardhistoryList: null == (n = r.Message.getRepeatedField(e, 1)) ? void 0 : n,
+                            awardlatestroundnum: r.Message.getFieldWithDefault(e, 2, 0)
+                        };
+                        return t && (o.$jspbMessageInstance = e),
+                        o
+                    }
+                    ),
+                    proto.RacingGameAwardHistory.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.RacingGameAwardHistory;
+                        return proto.RacingGameAwardHistory.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                for (var n = e.isDelimited() ? e.readPackedInt32() : [e.readInt32()], r = 0; r < n.length; r++)
+                                    t.addAwardhistory(n[r]);
+                                break;
+                            case 2:
+                                var o = e.readInt32();
+                                t.setAwardlatestroundnum(o);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.RacingGameAwardHistory.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        (n = t.getAwardhistoryList()).length > 0 && e.writePackedInt32(1, n),
+                        0 !== (n = t.getAwardlatestroundnum()) && e.writeInt32(2, n)
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.prototype.getAwardhistoryList = function() {
+                        return r.Message.getRepeatedField(this, 1)
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.prototype.setAwardhistoryList = function(t) {
+                        return r.Message.setField(this, 1, t || [])
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.prototype.addAwardhistory = function(t, e) {
+                        return r.Message.addToRepeatedField(this, 1, t, e)
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.prototype.clearAwardhistoryList = function() {
+                        return this.setAwardhistoryList([])
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.prototype.getAwardlatestroundnum = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.RacingGameAwardHistory.prototype.setAwardlatestroundnum = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    r.Message.GENERATE_TO_OBJECT && (proto.RacingGameCurrentRoundInfo.prototype.toObject = function(t) {
+                        return proto.RacingGameCurrentRoundInfo.toObject(t, this)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.toObject = function(t, e) {
+                        var n, r = {
+                            current: (n = e.getCurrent()) && proto.RoundMetaInfo.toObject(t, n),
+                            next: (n = e.getNext()) && proto.RoundMetaInfo.toObject(t, n),
+                            currentbanker: (n = e.getCurrentbanker()) && proto.CurrentBankerInfo.toObject(t, n)
+                        };
+                        return t && (r.$jspbMessageInstance = e),
+                        r
+                    }
+                    ),
+                    proto.RacingGameCurrentRoundInfo.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.RacingGameCurrentRoundInfo;
+                        return proto.RacingGameCurrentRoundInfo.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = new proto.RoundMetaInfo;
+                                e.readMessage(n, proto.RoundMetaInfo.deserializeBinaryFromReader),
+                                t.setCurrent(n);
+                                break;
+                            case 2:
+                                n = new proto.RoundMetaInfo;
+                                e.readMessage(n, proto.RoundMetaInfo.deserializeBinaryFromReader),
+                                t.setNext(n);
+                                break;
+                            case 3:
+                                n = new proto.CurrentBankerInfo;
+                                e.readMessage(n, proto.CurrentBankerInfo.deserializeBinaryFromReader),
+                                t.setCurrentbanker(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.RacingGameCurrentRoundInfo.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        null != (n = t.getCurrent()) && e.writeMessage(1, n, proto.RoundMetaInfo.serializeBinaryToWriter),
+                        null != (n = t.getNext()) && e.writeMessage(2, n, proto.RoundMetaInfo.serializeBinaryToWriter),
+                        null != (n = t.getCurrentbanker()) && e.writeMessage(3, n, proto.CurrentBankerInfo.serializeBinaryToWriter)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.getCurrent = function() {
+                        return r.Message.getWrapperField(this, proto.RoundMetaInfo, 1)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.setCurrent = function(t) {
+                        return r.Message.setWrapperField(this, 1, t)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.clearCurrent = function() {
+                        return this.setCurrent(void 0)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.hasCurrent = function() {
+                        return null != r.Message.getField(this, 1)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.getNext = function() {
+                        return r.Message.getWrapperField(this, proto.RoundMetaInfo, 2)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.setNext = function(t) {
+                        return r.Message.setWrapperField(this, 2, t)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.clearNext = function() {
+                        return this.setNext(void 0)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.hasNext = function() {
+                        return null != r.Message.getField(this, 2)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.getCurrentbanker = function() {
+                        return r.Message.getWrapperField(this, proto.CurrentBankerInfo, 3)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.setCurrentbanker = function(t) {
+                        return r.Message.setWrapperField(this, 3, t)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.clearCurrentbanker = function() {
+                        return this.setCurrentbanker(void 0)
+                    }
+                    ,
+                    proto.RacingGameCurrentRoundInfo.prototype.hasCurrentbanker = function() {
+                        return null != r.Message.getField(this, 3)
+                    }
+                    ,
+                    r.Message.GENERATE_TO_OBJECT && (proto.RoundMetaInfo.prototype.toObject = function(t) {
+                        return proto.RoundMetaInfo.toObject(t, this)
+                    }
+                    ,
+                    proto.RoundMetaInfo.toObject = function(t, e) {
+                        var n = {
+                            gametoken: r.Message.getFieldWithDefault(e, 1, ""),
+                            begintime: r.Message.getFieldWithDefault(e, 2, 0),
+                            awardtime: r.Message.getFieldWithDefault(e, 3, 0),
+                            endtime: r.Message.getFieldWithDefault(e, 4, 0),
+                            dayroundnum: r.Message.getFieldWithDefault(e, 5, 0)
+                        };
+                        return t && (n.$jspbMessageInstance = e),
+                        n
+                    }
+                    ),
+                    proto.RoundMetaInfo.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.RoundMetaInfo;
+                        return proto.RoundMetaInfo.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.RoundMetaInfo.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readString();
+                                t.setGametoken(n);
+                                break;
+                            case 2:
+                                n = e.readInt64();
+                                t.setBegintime(n);
+                                break;
+                            case 3:
+                                n = e.readInt64();
+                                t.setAwardtime(n);
+                                break;
+                            case 4:
+                                n = e.readInt64();
+                                t.setEndtime(n);
+                                break;
+                            case 5:
+                                n = e.readInt32();
+                                t.setDayroundnum(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.RoundMetaInfo.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.RoundMetaInfo.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        (n = t.getGametoken()).length > 0 && e.writeString(1, n),
+                        0 !== (n = t.getBegintime()) && e.writeInt64(2, n),
+                        0 !== (n = t.getAwardtime()) && e.writeInt64(3, n),
+                        0 !== (n = t.getEndtime()) && e.writeInt64(4, n),
+                        0 !== (n = t.getDayroundnum()) && e.writeInt32(5, n)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.getGametoken = function() {
+                        return r.Message.getFieldWithDefault(this, 1, "")
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.setGametoken = function(t) {
+                        return r.Message.setProto3StringField(this, 1, t)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.getBegintime = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.setBegintime = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.getAwardtime = function() {
+                        return r.Message.getFieldWithDefault(this, 3, 0)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.setAwardtime = function(t) {
+                        return r.Message.setProto3IntField(this, 3, t)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.getEndtime = function() {
+                        return r.Message.getFieldWithDefault(this, 4, 0)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.setEndtime = function(t) {
+                        return r.Message.setProto3IntField(this, 4, t)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.getDayroundnum = function() {
+                        return r.Message.getFieldWithDefault(this, 5, 0)
+                    }
+                    ,
+                    proto.RoundMetaInfo.prototype.setDayroundnum = function(t) {
+                        return r.Message.setProto3IntField(this, 5, t)
+                    }
+                    ,
+                    r.Message.GENERATE_TO_OBJECT && (proto.CurrentBankerInfo.prototype.toObject = function(t) {
+                        return proto.CurrentBankerInfo.toObject(t, this)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.toObject = function(t, e) {
+                        var n = {
+                            nickname: r.Message.getFieldWithDefault(e, 1, ""),
+                            racingcoin: r.Message.getFieldWithDefault(e, 2, 0),
+                            roundnum: r.Message.getFieldWithDefault(e, 3, 0),
+                            isbanker: r.Message.getFieldWithDefault(e, 4, 0),
+                            rotation: r.Message.getFieldWithDefault(e, 5, 0),
+                            ischallenge: r.Message.getFieldWithDefault(e, 6, 0)
+                        };
+                        return t && (n.$jspbMessageInstance = e),
+                        n
+                    }
+                    ),
+                    proto.CurrentBankerInfo.deserializeBinary = function(t) {
+                        var e = new r.BinaryReader(t)
+                          , n = new proto.CurrentBankerInfo;
+                        return proto.CurrentBankerInfo.deserializeBinaryFromReader(n, e)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.deserializeBinaryFromReader = function(t, e) {
+                        for (; e.nextField() && !e.isEndGroup(); ) {
+                            switch (e.getFieldNumber()) {
+                            case 1:
+                                var n = e.readString();
+                                t.setNickname(n);
+                                break;
+                            case 2:
+                                n = e.readInt64();
+                                t.setRacingcoin(n);
+                                break;
+                            case 3:
+                                n = e.readInt32();
+                                t.setRoundnum(n);
+                                break;
+                            case 4:
+                                n = e.readInt32();
+                                t.setIsbanker(n);
+                                break;
+                            case 5:
+                                n = e.readInt32();
+                                t.setRotation(n);
+                                break;
+                            case 6:
+                                n = e.readInt32();
+                                t.setIschallenge(n);
+                                break;
+                            default:
+                                e.skipField()
+                            }
+                        }
+                        return t
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.serializeBinary = function() {
+                        var t = new r.BinaryWriter;
+                        return proto.CurrentBankerInfo.serializeBinaryToWriter(this, t),
+                        t.getResultBuffer()
+                    }
+                    ,
+                    proto.CurrentBankerInfo.serializeBinaryToWriter = function(t, e) {
+                        var n = void 0;
+                        (n = t.getNickname()).length > 0 && e.writeString(1, n),
+                        0 !== (n = t.getRacingcoin()) && e.writeInt64(2, n),
+                        0 !== (n = t.getRoundnum()) && e.writeInt32(3, n),
+                        0 !== (n = t.getIsbanker()) && e.writeInt32(4, n),
+                        0 !== (n = t.getRotation()) && e.writeInt32(5, n),
+                        0 !== (n = t.getIschallenge()) && e.writeInt32(6, n)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.getNickname = function() {
+                        return r.Message.getFieldWithDefault(this, 1, "")
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.setNickname = function(t) {
+                        return r.Message.setProto3StringField(this, 1, t)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.getRacingcoin = function() {
+                        return r.Message.getFieldWithDefault(this, 2, 0)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.setRacingcoin = function(t) {
+                        return r.Message.setProto3IntField(this, 2, t)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.getRoundnum = function() {
+                        return r.Message.getFieldWithDefault(this, 3, 0)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.setRoundnum = function(t) {
+                        return r.Message.setProto3IntField(this, 3, t)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.getIsbanker = function() {
+                        return r.Message.getFieldWithDefault(this, 4, 0)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.setIsbanker = function(t) {
+                        return r.Message.setProto3IntField(this, 4, t)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.getRotation = function() {
+                        return r.Message.getFieldWithDefault(this, 5, 0)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.setRotation = function(t) {
+                        return r.Message.setProto3IntField(this, 5, t)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.getIschallenge = function() {
+                        return r.Message.getFieldWithDefault(this, 6, 0)
+                    }
+                    ,
+                    proto.CurrentBankerInfo.prototype.setIschallenge = function(t) {
+                        return r.Message.setProto3IntField(this, 6, t)
+                    }
+                    ,
+                    o.object.extend(n, proto)
+                }
+                , {
+                    "google-protobuf": 4
+                }]
+            }, {}, [5])
